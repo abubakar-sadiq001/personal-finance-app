@@ -12,7 +12,7 @@ export async function handleSignUp(prevState, formData) {
   const signupSchema = z.object({
     name: z.string().min(2, "Name too short"),
     email: z.string().email("Invalid email"),
-    password: string().min(8, "Password must be atleast 8 characters").trim(),
+    password: z.string().min(8, "Password must be atleast 8 characters").trim(),
   })
 
   const name = formData.get("name")

@@ -3,7 +3,7 @@
 function Select({ options, value, onChange, disabled, optionalWidth }) {
   return (
     <select
-      value={value}
+      value={value || ""}
       onChange={onChange}
       className={`${!optionalWidth && "ml-2"} cursor-pointer rounded-md border border-gray-500 px-2 py-3 text-sm outline-none`}
       style={{

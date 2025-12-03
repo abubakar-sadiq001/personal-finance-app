@@ -12,9 +12,11 @@ class InvalidLoginError extends Error {
 }
 
 export const authConfig = {
+  secret: process.env.NEXTAUTH_SECRET, // required in prod
   trustHost: true,
   basePath: "/api/auth",
   url: process.env.NEXTAUTH_URL,
+  basePath: "/api/auth", // MUST EXIST
 
   providers: [
     Credentials({

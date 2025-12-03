@@ -4,7 +4,7 @@ import { supabase } from "./supabase"
 
 export async function getTransactions({ sortBy, page, category = "all" } = {}) {
   const session = await auth()
-  const user_id = session.user.id
+  const user_id = session?.user?.id
 
   let query = supabase
     .from("transactions")
@@ -55,7 +55,7 @@ export async function getTransactions({ sortBy, page, category = "all" } = {}) {
 // GET TRANSACTIONS EXPLICITLY
 export async function getTransactionsExplicitly() {
   const session = await auth()
-  const user_id = session.user.id
+  const user_id = session?.user?.id
 
   const { data, error } = await supabase
     .from("transactions")
@@ -85,7 +85,7 @@ export async function getThemeColors() {
 
 export async function getBudgets() {
   const session = await auth()
-  const user_id = session.user.id
+  const user_id = session?.user?.id
 
   const { data: budgets, error } = await supabase
     .from("budgets")
@@ -102,7 +102,7 @@ export async function getBudgets() {
 
 export async function getPots() {
   const session = await auth()
-  const user_id = session.user.id
+  const user_id = session?.user?.id
 
   const { data, error } = await supabase
     .from("pots")

@@ -3,7 +3,7 @@
 import z from "zod"
 import { getUsersEmail } from "../data-services"
 import { supabase } from "../supabase"
-import { bcrypt } from "bcrypt"
+import bcrypt from "bcrypt"
 
 // SIGNUP USER
 export async function handleSignUp(prevState, formData) {

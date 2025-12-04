@@ -12,9 +12,10 @@ class InvalidLoginError extends Error {
 }
 
 export const authConfig = {
-  trustHost: process.env.AUTH_TRUST_HOST,
+  secret: process.env.NEXTAUTH_SECRET, // required in production
+  trustHost: process.env.AUTH_TRUST_HOST === "true", // convert to boolean
   basePath: "/api/auth",
-  url: process.env.NEXTAUTH_URL,
+  url: process.env.NEXTAUTH_URL, // must be set in Vercel
 
   providers: [
     Credentials({

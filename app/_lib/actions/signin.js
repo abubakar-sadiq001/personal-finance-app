@@ -5,11 +5,8 @@ import { AuthError } from "next-auth"
 
 // SIGNIN USER
 export async function handleSignIn(prevState, formData) {
-  console.log("PUBLIC SUPABASE_URL:", process.env.NEXT_PUBLIC_SUPABASE_URL)
-  console.log(
-    " NEXT_PUBLIC_SUPABASE_ANON_KEY:",
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-  )
+  console.log("PUBLIC SUPABASE_URL:", process.env.SUPABASE_URL)
+  console.log(" SUPABASE_ANON_KEY:", process.env.SUPABASE_ANON_KEY)
 
   try {
     await signIn("credentials", {

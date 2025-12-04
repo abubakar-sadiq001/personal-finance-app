@@ -1,14 +1,20 @@
 "use server"
 
 import { auth } from "@/app/api/auth/[...nextauth]/route"
-import { supabase } from "../supabase"
+// import { supabase } from "../supabase"
 import { revalidatePath } from "next/cache"
 import z from "zod"
+import { createServerClient } from "../supabaseServer"
+
+function db() {
+  return createServerClient()
+}
 
 // ADD POT MONEY
 export async function handleDeposit(prevState, formData) {
   const session = await auth()
   const user_id = session.user.id
+  const supabase = db()
 
   const potID = Number(formData.get("potID"))
 

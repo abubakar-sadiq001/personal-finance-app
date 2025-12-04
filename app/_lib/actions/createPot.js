@@ -2,13 +2,19 @@
 
 import { auth } from "@/app/api/auth/[...nextauth]/route"
 import z from "zod"
-import { supabase } from "../supabase"
+// import { supabase } from "../supabase"
 import { revalidatePath } from "next/cache"
+import { createServerClient } from "../supabaseServer"
+
+function db() {
+  return createServerClient()
+}
 
 // CREATE POT
 export async function hanldeCreatePot(prevState, potData) {
   const session = await auth()
   const user_id = session.user.id
+  const supabase = db()
 
   const newPotSchema = z.object({
     potName: z

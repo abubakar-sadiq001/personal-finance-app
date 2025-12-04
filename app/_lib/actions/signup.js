@@ -2,12 +2,18 @@
 
 import z from "zod"
 import { getUsersEmail } from "../data-services"
-import { supabase } from "../supabase"
+// import { supabase } from "../supabase"
 import bcrypt from "bcrypt"
+import { createServerClient } from "../supabaseServer"
+
+function db() {
+  return createServerClient()
+}
 
 // SIGNUP USER
 export async function handleSignUp(prevState, formData) {
   const emails = await getUsersEmail()
+  const supabase = db()
 
   const signupSchema = z.object({
     name: z.string().min(2, "Name too short"),

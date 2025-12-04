@@ -4,11 +4,17 @@ import { z } from "zod"
 
 import { revalidatePath } from "next/cache"
 import { auth } from "../api/auth/[...nextauth]/route"
-import { supabase } from "./supabase"
+import { createServerClient } from "./supabaseServer"
+// import { supabase } from "./supabase"
+
+function db() {
+  return createServerClient()
+}
 
 export async function createTransaction(prevState, formData) {
   const session = await auth()
   const user_id = session?.user?.id
+  const supabase = db()
 
   const isRecurring = formData.get("isRecurring") === "true" ? true : false
 

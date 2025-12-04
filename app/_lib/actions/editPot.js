@@ -2,13 +2,19 @@
 
 import { auth } from "@/app/api/auth/[...nextauth]/route"
 import z from "zod"
-import { supabase } from "../supabase"
+// import { supabase } from "../supabase"
 import { revalidatePath } from "next/cache"
+import { createServerClient } from "../supabaseServer"
+
+function db() {
+  return createServerClient()
+}
 
 // EDIT POT
 export async function handleEditPot(prevState, potData) {
   const session = await auth()
   const user_id = session.user.id
+  const supabase = db()
 
   const editingID = Number(potData.get("editPotId"))
 

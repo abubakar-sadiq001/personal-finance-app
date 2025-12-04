@@ -11,4 +11,6 @@ const nextConfig = {
   },
 }
 
+console.log("SUPABASE_URL during build:", process.env.SUPABASE_URL)
+
 export default nextConfig

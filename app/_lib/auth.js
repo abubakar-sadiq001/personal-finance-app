@@ -12,7 +12,7 @@ class InvalidLoginError extends Error {
 }
 
 export const authConfig = {
-  trustHost: true,
+  trustHost: process.env.AUTH_TRUST_HOST,
   basePath: "/api/auth",
   url: process.env.NEXTAUTH_URL,
 

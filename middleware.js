@@ -15,7 +15,7 @@ export function middleware(request) {
 export async function middleware(request) {
   const token = await getToken({
     req: request,
-    secret: process.env.AUTH_SECRET,
+    secret: process.env.NEXTAUTH_SECRET,
   })
 
   // If no token and trying to access protected route, redirect to login

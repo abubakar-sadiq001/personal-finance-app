@@ -2,7 +2,7 @@
 
 import { auth } from "@/app/api/auth/[...nextauth]/route"
 import z from "zod"
-import { supabase } from "../supabase"
+// import { supabase } from "../supabase"
 import { revalidatePath } from "next/cache"
 import { createServerClient } from "../supabaseServer"
 

@@ -143,7 +143,6 @@
 //   return usersEmail
 // }
 
-"use server"
 // VERY IMPORTANT: forces this file to be server-only
 // so it will not run during build as an RSC
 

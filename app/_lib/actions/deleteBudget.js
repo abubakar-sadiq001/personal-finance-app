@@ -1,7 +1,6 @@
 "use server"
 
 import { auth } from "@/app/api/auth/[...nextauth]/route"
-// import { supabase } from "../supabase"
 import { revalidatePath } from "next/cache"
 import { createServerClient } from "../supabaseServer"
 
@@ -26,6 +25,6 @@ export async function deleteBudget(budgetId) {
 
     revalidatePath("/budgets")
   } catch (err) {
-    throw new Error(err.message)
+    throw new Error(err?.message)
   }
 }

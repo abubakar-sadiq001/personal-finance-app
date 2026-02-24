@@ -28,7 +28,7 @@ function DeletePotModal({ onCloseModal }) {
   return (
     <div>
       <p className="text-[14px] text-gray-500">
-        Are you sure you want to delete this budget? This action cannot be
+        Are you sure you want to delete this pot? This action cannot be
         reversed, and all the data inside it will be removed forever.
       </p>
       <div className="my-4">

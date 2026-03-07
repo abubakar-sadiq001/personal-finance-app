@@ -19,7 +19,7 @@ https://personal-finance-app-2zd7.vercel.app/
 
 ### Dashboard
 
-![Dashboard](./screenshots/finance-app-dashboard.png)
+![Dashboard](../finance-app-dashboard.png)
 
 ### Add Transaction
 
@@ -138,7 +138,9 @@ npm run dev
 
 Then open:
 
+```bash
 http://localhost:3000
+```
 
 ---
 

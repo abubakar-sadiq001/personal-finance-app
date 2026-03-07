@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Finance Snapshot
+
+## Overview
+
+This project is a **personal finance tracking application** that helps users monitor their income, expenses, and spending patterns.
+
+The application allows users to record transactions, categorize them, and visualize their finances through charts and summaries. The focus of the project is **simplicity, clarity, and smooth user interaction** so users can quickly understand where their money is going.
+
+I originally built this project as a personal finance tracker and refined for this assessment.
+
+---
+
+## Live Demo
+
+**Live Application:**
+https://personal-finance-app-2zd7.vercel.app/
+
+## Preview
+
+### Dashboard
+
+![Dashboard](./screenshots/finance-app-dashboard.png)
+
+### Add Transaction
+
+![Add Transaction](./screenshots/finance-app-transaction.png)
+
+### Budget Management
+
+![Budget](./screenshots/finance-app-budget.png)
+
+---
+
+## Features
+
+- Add new transactions (name, amount, category, avatar)
+- Track income and expenses
+- Categorize transactions
+- Visualize spending with charts
+- Basic budget tracking
+- Create & manage pots
+- Persistent data storage
+- Clean and intuitive UI
+
+---
+
+## Assessment Requirements
+
+The project was built to match the core expectations of the take-home assessment.
+
+- [x] Display income and expenses across categories
+- [x] Add new transactions
+- [x] Spending visualization
+- [x] Budget tracking
+- [x] Persistent data storage
+
+---
+
+## Tech Stack
+
+- **Next.js**
+- **React**
+- **Tailwind CSS**
+- **Supabase**
+- **Recharts (Chart library) for financial visualization**
+
+---
+
+## Design & Implementation Choices
+
+The application focuses on **clarity and ease of use**. Financial data should be easy to read, understand, and update quickly.
+
+Some key decisions:
+
+- A **minimal UI** to reduce cognitive load
+- **Visual charts** to make spending patterns easier to understand
+- **Component-based architecture** for maintainability
+- Simple interaction flow for adding transactions quickly
+
+Although the application uses Supabase for persistence, the core functionality behaves like a lightweight frontend finance tracker.
+
+---
+
+## Challenges
+
+A key challenge was structuring transaction data in a way that makes it easy to:
+
+- Categorize transactions
+- Calculate totals efficiently
+- Update visualizations dynamically
+
+This was handled by separating data handling logic from UI components and organizing the state structure carefully.
+
+---
+
+## What I Would Improve With More Time
+
+- User profile & Account management
+- More detailed financial analytics
+- Export transaction data... and so much more...
+
+---
+
+## Project Structure
+
+app
+├── _components # Reusable UI components
+├── \_lib # Server actions
+├── \_utils # Helper functions
+├── _(app) # Application routes (grouped)
+├── _(auth) # User authentication
+├── _(api) # Next auth api config
+└── \_styles # Global styles
+
+This structure keeps the codebase modular and easy to maintain.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
+
+git clone https://github.com/abubakar-sadiq001/personal-finance-app.git
+
+Install dependencies:
 
 ```bash
+npm install
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Time Spent
 
-To learn more about Next.js, take a look at the following resources:
+The project was originally built as a personal finance application and later refined for this assessment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Approximate time spent preparing and polishing for submission: **3–5 hours**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Abubakar Sadiq

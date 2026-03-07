@@ -23,11 +23,11 @@ https://personal-finance-app-2zd7.vercel.app/
 
 ### Add Transaction
 
-![Add Transaction](./screenshots/finance-app-transaction.png)
+![Add Transaction](public/screenshots/finance-app-transaction.png)
 
 ### Budget Management
 
-![Budget](./screenshots/finance-app-budget.png)
+![Budget](public/screenshots/finance-app-budget.png)
 
 ---
 

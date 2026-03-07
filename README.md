@@ -104,13 +104,13 @@ This was handled by separating data handling logic from UI components and organi
 ## Project Structure
 
 app
-├── _components # Reusable UI components
-├── \_lib # Server actions
-├── \_utils # Helper functions
-├── _(app) # Application routes (grouped)
-├── _(auth) # User authentication
-├── _(api) # Next auth api config
-└── \_styles # Global styles
+├── components # Reusable UI components
+├── lib # Server actions
+├── utils # Helper functions
+├── (app) # Application routes (grouped)
+├── (auth) # User authentication
+├── api # Next auth api config
+└── styles # Global styles
 
 This structure keeps the codebase modular and easy to maintain.
 

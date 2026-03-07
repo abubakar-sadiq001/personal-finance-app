@@ -103,6 +103,7 @@ This was handled by separating data handling logic from UI components and organi
 
 ## Project Structure
 
+```bash
 app
 ├── components # Reusable UI components
 ├── lib # Server actions
@@ -111,6 +112,7 @@ app
 ├── (auth) # User authentication
 ├── api # Next auth api config
 └── styles # Global styles
+```
 
 This structure keeps the codebase modular and easy to maintain.
 
@@ -126,9 +128,11 @@ Install dependencies:
 
 ```bash
 npm install
+```
 
 Run the development server:
 
+```bash
 npm run dev
 ```
 

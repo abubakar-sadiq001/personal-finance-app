@@ -19,7 +19,7 @@ https://personal-finance-app-2zd7.vercel.app/
 
 ### Dashboard
 
-<img src="./public/screenshots/finance-app-dashboard.png" />
+![Dashboard](public/screenshots/finance-app-dashboard.png)
 
 ### Add Transaction
 
